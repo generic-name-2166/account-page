@@ -20,6 +20,8 @@ jobs:
         run: bun install --production
 
       - name: Build
+        env:
+          GITHUB_DEPLOY: "true"
         run: bun run generate
 
       - name: Upload Artifacts
