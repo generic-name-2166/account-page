@@ -11,8 +11,8 @@ const preview = base + "preview";
     <Logo />
 
     <div class="grid grid-cols-2 gap-x-36">
-      <a :href="base" class="hover:underline">Форма</a>
-      <a :href="preview" class="hover:underline">Превью</a>
+      <NuxtLink :to="base" class="hover:underline">Форма</NuxtLink>
+      <NuxtLink :to="preview" class="hover:underline">Превью</NuxtLink>
     </div>
   </header>
 </template>

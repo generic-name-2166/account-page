@@ -2,6 +2,8 @@
 interface InputFieldProps {
   label: string;
   number?: boolean;
+  required?: boolean;
+  name?: string;
 }
 
 const props = defineProps<InputFieldProps>();
@@ -11,7 +13,13 @@ const type_: HTMLInputElement["type"] = props.number ? "number" : "text";
 <template>
   <div class="rounded border px-3 py-2">
     <div class="relative mt-5 flex flex-col text-gray-500">
-      <input :type="type_" :class="$style.input" placeholder=" " />
+      <input
+        :type="type_"
+        :class="$style.input"
+        placeholder=" "
+        :required="props.required"
+        :name="props.name"
+      />
       <label :class="$style.label">
         {{ props.label }}
       </label>
