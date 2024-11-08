@@ -10,8 +10,8 @@ const type_: HTMLInputElement["type"] = props.number ? "number" : "text";
 
 <template>
   <div class="rounded border px-3 py-2">
-    <div class="relative mt-5 text-gray-500 flex flex-col">
-      <input :type="type_" :class="$style.input" />
+    <div class="relative mt-5 flex flex-col text-gray-500">
+      <input :type="type_" :class="$style.input" placeholder=" " />
       <label :class="$style.label">
         {{ props.label }}
       </label>
@@ -20,9 +20,12 @@ const type_: HTMLInputElement["type"] = props.number ? "number" : "text";
 </template>
 
 <style lang="css" module>
-/* https://github.com/tailwindlabs/tailwindcss-intellisense/issues/991 */
+/* 
+https://github.com/tailwindlabs/tailwindcss-intellisense/issues/991 
+https://stackoverflow.com/a/52335352
+*/
 .input {
-  @apply border-none hover:mb-0 focus:mb-0 focus:outline-none;
+  @apply mb-1 ml-1 border-none focus:outline-none;
 }
 
 .label {
@@ -34,12 +37,8 @@ const type_: HTMLInputElement["type"] = props.number ? "number" : "text";
 }
 
 .input:focus + .label,
-.input:active + .label {
+.input:active + .label,
+.input:not(:placeholder-shown) + .label {
   @apply pointer-events-auto mb-5 text-sm outline-2;
-}
-
-.input.empty:not(:focus) + .label,
-.input.empty:not(:active) + .label {
-  @apply pointer-events-none mb-0 text-base;
 }
 </style>
