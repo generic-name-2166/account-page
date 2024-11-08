@@ -21,21 +21,27 @@ import PlusIcon from "./PlusIcon.vue";
           <p>Дети (макс. 5)</p>
           <button
             type="button"
-            class="block rounded-full border border-blue-500 px-5 py-3 font-normal text-blue-500"
+            class="block rounded-full border border-blue-500 px-5 py-3 font-normal text-blue-500 hover:bg-blue-100"
           >
             <PlusIcon /> <span class="pl-1">Добавить ребенка</span>
           </button>
         </legend>
         <InputField label="Имя" />
         <InputField label="Возраст" number />
-        <button type="button" class="block text-blue-500">Удалить</button>
+        <button type="button" class="block text-blue-500 hover:underline">
+          Удалить
+        </button>
 
         <InputField label="Имя" />
         <InputField label="Возраст" number />
-        <button type="button" class="block text-blue-500">Удалить</button>
+        <button type="button" class="block text-blue-500 hover:underline">
+          Удалить
+        </button>
       </fieldset>
 
-      <button class="rounded-full bg-blue-500 px-5 py-3 text-white">
+      <button
+        class="rounded-full bg-blue-500 px-5 py-3 text-white hover:bg-blue-400"
+      >
         Сохранить
       </button>
     </form>
