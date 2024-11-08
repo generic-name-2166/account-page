@@ -2,8 +2,8 @@
 import { useRuntimeConfig } from "#app";
 import Logo from "./Logo.vue";
 
-const base = useRuntimeConfig().public.base;
-const preview = `${base}/preview`;
+const base = useRuntimeConfig().public.base + "/";
+const preview = base + "preview";
 </script>
 
 <template>
