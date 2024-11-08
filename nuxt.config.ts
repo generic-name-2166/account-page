@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: "github-pages",
   },
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss"],
   runtimeConfig: {
     public: {
       base: baseUrl,
