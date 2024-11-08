@@ -4,7 +4,7 @@ import PlusIcon from "./PlusIcon.vue";
 </script>
 
 <template>
-  <main class="flex flex-grow justify-center">
+  <main class="flex flex-grow justify-center py-8">
     <form class="space-y-10">
       <fieldset class="space-y-3">
         <legend class="w-full px-0.5 font-semibold">Персональные данные</legend>
