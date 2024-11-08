@@ -9,7 +9,7 @@ const type_: HTMLInputElement["type"] = props.number ? "number" : "text";
 </script>
 
 <template>
-  <div class="rounded border py-2 px-3">
+  <div class="rounded border px-3 py-2">
     <div class="relative mt-5 text-gray-500">
       <input :type="type_" :class="$style.input" />
       <label :class="$style.label">
