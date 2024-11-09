@@ -1,6 +1,6 @@
 import { defineNuxtConfig } from "nuxt/config";
 
-const baseUrl = process.env.GITHUB_DEPLOY ? "/account-page" : "";
+const baseUrl = "/account-page";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
