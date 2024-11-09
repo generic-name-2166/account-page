@@ -2,8 +2,6 @@
 import { useStore } from "~/store.ts";
 
 const store = useStore();
-
-console.log(store.account);
 </script>
 
 <template>

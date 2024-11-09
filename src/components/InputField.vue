@@ -5,7 +5,6 @@ interface InputFieldProps {
   required?: boolean;
   name?: string;
 }
-
 const props = defineProps<InputFieldProps>();
 const type_: HTMLInputElement["type"] = props.number ? "number" : "text";
 </script>
