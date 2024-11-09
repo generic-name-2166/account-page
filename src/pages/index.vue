@@ -16,8 +16,17 @@ function submit(event: Event): void {
     name: data.get("account-name") as string,
     age: parseInt(data.get("account-age") as string),
   } satisfies Person;
+  const children: Person[] = keys.value.map((key: number): Person => {
+    const name = data.get(`child-name-${key}`) as string;
+    const age = data.get(`child-age-${key}`) as string;
+    return {
+      name,
+      age: parseInt(age),
+    };
+  });
 
-  store.update(account, []);
+  store.update(account, children);
+  form.reset();
 }
 
 function addChild(): void {
@@ -58,8 +67,8 @@ function deleteChild(key: number): void {
         </legend>
 
         <template v-for="key in keys" :key="key">
-          <InputField label="Имя" required />
-          <InputField label="Возраст" number required />
+          <InputField label="Имя" required :name="`child-name-${key}`" />
+          <InputField label="Возраст" number required :name="`child-age-${key}`" />
           <button
             type="button"
             class="block text-blue-500 hover:underline"

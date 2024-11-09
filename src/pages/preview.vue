@@ -16,8 +16,12 @@ const store = useStore();
 
       <section class="space-y-3">
         <h2>Дети</h2>
-        <ChildSection name="Петр" :age="10" />
-        <ChildSection name="Василий" :age="14" />
+        <ChildSection
+          v-for="(child, i) in store.children"
+          :key="i"
+          :name="child.name"
+          :age="child.age"
+        />
       </section>
     </article>
   </main>
