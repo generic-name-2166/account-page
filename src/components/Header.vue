@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import { useRuntimeConfig } from "#app";
 import Logo from "./Logo.vue";
-
-const base = useRuntimeConfig().public.base;
-const preview = base + "/preview";
 </script>
 
 <template>
@@ -11,8 +7,8 @@ const preview = base + "/preview";
     <Logo />
 
     <div class="grid grid-cols-2 gap-x-36">
-      <NuxtLink :to="base" class="hover:underline">Форма</NuxtLink>
-      <NuxtLink :to="preview" class="hover:underline">Превью</NuxtLink>
+      <NuxtLink to="/" class="hover:underline">Форма</NuxtLink>
+      <NuxtLink to="/preview" class="hover:underline">Превью</NuxtLink>
     </div>
   </header>
 </template>

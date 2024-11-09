@@ -1,9 +1,12 @@
 import { defineNuxtConfig } from "nuxt/config";
 
-const baseUrl = "/account-page";
+const baseURL = "/account-page";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    baseURL,
+  },
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   $production: {
@@ -18,11 +21,6 @@ export default defineNuxtConfig({
     preset: "github-pages",
   },
   modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss"],
-  runtimeConfig: {
-    public: {
-      base: baseUrl,
-    },
-  },
   css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {

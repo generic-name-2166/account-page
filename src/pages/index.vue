@@ -68,7 +68,12 @@ function deleteChild(key: number): void {
 
         <template v-for="key in keys" :key="key">
           <InputField label="Имя" required :name="`child-name-${key}`" />
-          <InputField label="Возраст" number required :name="`child-age-${key}`" />
+          <InputField
+            label="Возраст"
+            number
+            required
+            :name="`child-age-${key}`"
+          />
           <button
             type="button"
             class="block text-blue-500 hover:underline"
